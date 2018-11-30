@@ -4,10 +4,13 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.FileInputStream;
 public class index {
        public static void main(String[] args)throws IOException {
-              Writer writer = new Writer();
-              writer.write();
+              Game game = new Game();
+              game.write();
+              game.read();
+              System.out.println("Juego Terminado");
        }
 }
 
@@ -49,9 +52,9 @@ class Game {
        }
 
        public void read() throws Exception{
-              FileOutputStream fileStream = new FileOutputStream("MyGame.ser");
+              FileInputStream fileStream = new FileInputStream("MyGame.ser");
               ObjectInputStream os = new ObjectInputStream(fileStream);
-              Character charac =  os.readObject();
+              Character charac = (Character) os.readObject();
               os.close();
        }
        class Character {
