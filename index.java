@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
-<<<<<<< HEAD
 import java.io.FileInputStream;
 public class index {
        public static void main(String[] args)throws IOException {
@@ -12,12 +11,6 @@ public class index {
               game.write();
               game.read();
               System.out.println("Juego Terminado");
-=======
-public class index {
-       public static void main(String[] args)throws IOException {
-              Writer writer = new Writer();
-              writer.write();
->>>>>>> 288ef3a736f64c91b923dd820e689c4291600c4a
        }
 }
 
@@ -59,15 +52,9 @@ class Game {
        }
 
        public void read() throws Exception{
-<<<<<<< HEAD
               FileInputStream fileStream = new FileInputStream("MyGame.ser");
               ObjectInputStream os = new ObjectInputStream(fileStream);
               Character charac = (Character) os.readObject();
-=======
-              FileOutputStream fileStream = new FileOutputStream("MyGame.ser");
-              ObjectInputStream os = new ObjectInputStream(fileStream);
-              Character charac =  os.readObject();
->>>>>>> 288ef3a736f64c91b923dd820e689c4291600c4a
               os.close();
        }
        class Character {
