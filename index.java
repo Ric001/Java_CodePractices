@@ -11,6 +11,7 @@ public class index {
               game.write();
               game.read();
               System.out.println("Juego Terminado");
+              System.out.println("Todos felices");
        }
 }
 
