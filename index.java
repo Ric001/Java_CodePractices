@@ -6,12 +6,13 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.FileInputStream;
 public class index {
-       public static void main(String[] args)throws IOException {
+       public static void main(String[] args)throws Exception {
               Game game = new Game();
               game.write();
               game.read();
               System.out.println("Juego Terminado");
               System.out.println("Todos felices");
+       
        }
 }
 
@@ -69,5 +70,18 @@ class Game {
                      this.characterType = characterType;
               }
               
+       }
+
+       class Armor {
+              String name;
+              String type;
+              int resistence;
+              
+              public Armor(String name, String type, int resitence) {
+                     this.name = name; 
+                     this.type = type;
+                     this.resistence = resitence;
+                     
+              }
        }
 }
