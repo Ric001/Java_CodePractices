@@ -12,6 +12,9 @@ public class index {
               game.read();
               System.out.println("Juego Terminado");
               System.out.println("Todos felices");
+              Writer writer = new Writer();
+              Read reader = new Read();
+              
        
        }
 }
@@ -57,6 +60,7 @@ class Game {
               FileInputStream fileStream = new FileInputStream("MyGame.ser");
               ObjectInputStream os = new ObjectInputStream(fileStream);
               Character charac = (Character) os.readObject();
+              Armor armor = new Armor("Armor","Defense",200);
               os.close();
        }
        class Character {
